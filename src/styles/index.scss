@@ -93,16 +93,20 @@
     padding: .2rem 2rem;
     background-color: #f8f9fa;
     color: black;
+    border-radius: 2rem;
     border: 1px #122444 solid;
-    font-size: 20px;
     outline: none;
     -moz-outline-style: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 .work-button:hover {
     background-color: #122444;
     color: white;
     cursor: pointer;
+}
+.work-button:focus {
+    outline: 0;
 }
 
 .flex {

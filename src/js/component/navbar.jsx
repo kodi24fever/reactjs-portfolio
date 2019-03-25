@@ -5,6 +5,8 @@ import About from "./about.jsx";
 import Projects from "./projects.jsx";
 import Contact from "./contact.jsx";
 
+import WOW from "wowjs";
+
 class Navbar extends React.Component {
 	constructor(props) {
 		super(props);
@@ -13,6 +15,10 @@ class Navbar extends React.Component {
 		this.contact = React.createRef();
 
 		this.scrolling = this.scrolling.bind(this);
+	}
+
+	componentDidMount() {
+		new WOW.WOW().init();
 	}
 
 	navEffect() {
@@ -46,6 +52,7 @@ class Navbar extends React.Component {
 					ref={this.navEffect}
 					id="my-background"
 					aboutRef={this.about}
+					bounceIn={"wow bounceIn"}
 				/>
 				<nav
 					id="navbar"
@@ -59,7 +66,7 @@ class Navbar extends React.Component {
 									behavior: "smooth"
 								});
 							}}>
-							Home
+							Back to Space
 						</a>
 						<button
 							className="navbar-toggler"
@@ -101,9 +108,27 @@ class Navbar extends React.Component {
 					</div>
 				</nav>
 
-				<About ref={this.about} id="about-container" />
-				<Projects ref={this.projects} id="my-projects" />
-				<Contact ref={this.contact} id="my-contact" />
+				<About
+					ref={this.about}
+					id="about-container"
+					bounceLeft={"wow bounceInLeft"}
+					fadeInLeft={"wow fadeInLeft"}
+					fadeInRight={"wow fadeInRight"}
+					fadeIn={"wow fadeIn"}
+					tada={"wow fadeIn"}
+				/>
+				<Projects
+					ref={this.projects}
+					id="my-projects"
+					fadeInRight={"wow fadeInRight"}
+					fadeIn={"wow fadeIn"}
+				/>
+				<Contact
+					ref={this.contact}
+					id="my-contact"
+					fadeInLeft={"wow fadeInLeft"}
+					shake={"wow pulse"}
+				/>
 			</div>
 		);
 	}

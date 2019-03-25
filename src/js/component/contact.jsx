@@ -1,16 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 export default class Contact extends React.Component {
 	render() {
 		return (
 			<div id="my-contact" className="container text-center my-5">
-				<h1 id="contact" className="hidden mb-3">
+				<h1 id="contact" className={"mb-3 " + this.props.fadeInLeft}>
 					Contact
 				</h1>
 				<form
+					className={this.props.shake}
 					action="https://formspree.io/frankdavid93om@yahoo.com"
 					method="POST">
-					<div className="form-group hiddenRight">
+					<div className="form-group">
 						<div className="row">
 							<div className="col-12 col-sm-12 col-md-6 mx-auto">
 								<input
@@ -63,3 +65,8 @@ export default class Contact extends React.Component {
 		);
 	}
 }
+
+Contact.propTypes = {
+	fadeInLeft: PropTypes.string,
+	shake: PropTypes.string
+};

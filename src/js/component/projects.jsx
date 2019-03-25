@@ -2,18 +2,28 @@ import React from "react";
 import Vmarine from "../../img/Vmarine.jpg";
 import aguaDeLuz from "../../img/aguaDeLuz.png";
 import todo from "../../img/todolist.png";
+import PropTypes from "prop-types";
 
-class Projects extends React.Component {
+export default class Projects extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return (
 			<React.Fragment>
 				<div id="my-projects" className="container-fluid bg-light mt-5">
 					<div className=" project-container container bg-light pb-5">
-						<h1 id="projects" className="text-center hidden">
+						<h1
+							id="projects"
+							className={"text-center " + this.props.fadeInRight}>
 							Projects
 						</h1>
 						<div className="row my-5">
-							<div className="testbg col-12 col-sm-12 col-md-4 hiddenBot">
+							<div
+								className={
+									"testbg col-12 col-sm-12 col-md-4 " +
+									this.props.fadeIn
+								}>
 								<div className="overlay">
 									<div className="text">
 										<h2>VMarine</h2>
@@ -38,7 +48,11 @@ class Projects extends React.Component {
 									</div>
 								</div>
 							</div>
-							<div className="aguabg col-12 col-sm-12 col-md-4 hiddenBot">
+							<div
+								className={
+									"aguabg col-12 col-sm-12 col-md-4 " +
+									this.props.fadeIn
+								}>
 								<div className="overlay">
 									<div className="text">
 										<h2>Aguas De Luz</h2>
@@ -63,7 +77,11 @@ class Projects extends React.Component {
 									</div>
 								</div>
 							</div>
-							<div className="todobg col-12 col-sm-12 col-md-4 hiddenBot">
+							<div
+								className={
+									"todobg col-12 col-sm-12 col-md-4 " +
+									this.props.fadeIn
+								}>
 								<div className="overlay">
 									<div className="text">
 										<h2>To Do List</h2>
@@ -239,4 +257,10 @@ class Projects extends React.Component {
 	}
 }
 
-export default Projects;
+Projects.propTypes = {
+	bounceIn: PropTypes.string,
+	fadeInLeft: PropTypes.string,
+	fadeInRight: PropTypes.string,
+	fadeIn: PropTypes.string,
+	tada: PropTypes.string
+};

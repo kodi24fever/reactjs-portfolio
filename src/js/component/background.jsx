@@ -1,10 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import WOW from "wowjs";
+
 export default class Background extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+
+	componentDidMount() {
+		new WOW.WOW().init();
+	}
+
 	render() {
 		return (
 			<div id="my-background" className="background">
@@ -17,8 +24,10 @@ export default class Background extends React.Component {
 						<br />
 						I&apos;m a Full Stack Web Developer.
 					</h1>
+					{/* offset can be cahnged in node modules wowjs default file */}
 					<button
-						className="work-button"
+						className={"work-button " + this.props.bounceIn}
+						data-wow-offset="0"
 						onClick={() => {
 							let node = document.getElementById(
 								this.props.aboutRef.current.props.id
@@ -37,5 +46,6 @@ export default class Background extends React.Component {
 }
 
 Background.propTypes = {
-	aboutRef: PropTypes.node
+	aboutRef: PropTypes.object,
+	bounceIn: PropTypes.string
 };

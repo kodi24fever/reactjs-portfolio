@@ -10,28 +10,41 @@ export default class About extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+
 	render() {
 		return (
 			<div
 				id="about-container"
 				className="content-containers container text-center mt-5">
-				<h1 id="about" className="hidden">
+				<h1 id="about" className={this.props.bounceLeft}>
 					About
 				</h1>
 				<div className="row mt-5">
-					<div className="col-6 col-sm-6 col-md-3 hidden">
+					<div
+						className={
+							"col-6 col-sm-6 col-md-3 " + this.props.fadeInLeft
+						}>
 						<img src={layers} />
 						<h4>Responsive</h4>
 					</div>
-					<div className="col-6 col-sm-6 col-md-3 hidden">
+					<div
+						className={
+							"col-6 col-sm-6 col-md-3 " + this.props.fadeInLeft
+						}>
 						<img src={pen} />
 						<h4>Design</h4>
 					</div>
-					<div className="col-6 col-sm-6 col-md-3 hiddenRight">
+					<div
+						className={
+							"col-6 col-sm-6 col-md-3 " + this.props.fadeInRight
+						}>
 						<img src={cogwheel} />
 						<h4>Performance</h4>
 					</div>
-					<div className="col-6 col-sm-6 col-md-3 hiddenRight">
+					<div
+						className={
+							"col-6 col-sm-6 col-md-3 " + this.props.fadeInRight
+						}>
 						<img src={browser} />
 						<h4>Agile</h4>
 					</div>
@@ -40,7 +53,7 @@ export default class About extends React.Component {
 				<div className="row" style={{ marginTop: 7 + "rem" }}>
 					<div className="col-12 col-lg-6 hidden">
 						<img
-							className="img-fluid"
+							className={"img-fluid " + this.props.fadeIn}
 							src={myImage}
 							style={{
 								borderRadius: 50 + "%",
@@ -48,13 +61,17 @@ export default class About extends React.Component {
 								width: 250 + "px"
 							}}
 						/>
-						<p className="mytext pt-3">
+						<p className={"mytext pt-3 " + this.props.fadeIn}>
 							I love to transform ideas into reality using code. I
 							am passionate about using Javascript and animations
 							to create awesome user experiences.
 						</p>
 					</div>
-					<div className="col-12 col-sm-12 col-md-6 hiddenRight">
+					<div
+						className={
+							"col-12 col-sm-12 col-md-12 col-lg-6 " +
+							this.props.tada
+						}>
 						<div className="progress mb-3">
 							<div
 								className="progress-bar fill-80-bar"
@@ -151,3 +168,11 @@ export default class About extends React.Component {
 		);
 	}
 }
+
+About.propTypes = {
+	bounceLeft: PropTypes.string,
+	fadeInLeft: PropTypes.string,
+	fadeInRight: PropTypes.string,
+	fadeIn: PropTypes.string,
+	tada: PropTypes.string
+};
