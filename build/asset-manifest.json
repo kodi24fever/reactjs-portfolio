@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.760b5825.chunk.css",
+    "main.js": "/static/js/main.5e815142.chunk.js",
+    "main.js.map": "/static/js/main.5e815142.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.9dafe002.chunk.css": "/static/css/2.9dafe002.chunk.css",
+    "static/js/2.2681677b.chunk.js": "/static/js/2.2681677b.chunk.js",
+    "static/js/2.2681677b.chunk.js.map": "/static/js/2.2681677b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.32aa79cd52445b0bcc79becd51c38095.js": "/precache-manifest.32aa79cd52445b0bcc79becd51c38095.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.9dafe002.chunk.css.map": "/static/css/2.9dafe002.chunk.css.map",
+    "static/css/main.760b5825.chunk.css.map": "/static/css/main.760b5825.chunk.css.map",
+    "static/media/index.scss": "/static/media/todolist.d5e5ba24.png",
+    "static/media/myImage.png": "/static/media/myImage.94822dbf.png"
+  }
+}
