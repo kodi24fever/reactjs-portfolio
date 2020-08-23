@@ -30,7 +30,7 @@ Personal portfolio page [www.fdaviz.com](https://www.fdaviz.com/) built in React
 
 1. Implementing Wow.js + Animate.css was difficult at the beginning, but worth it. It takes time to make it work with your app, yet it takes less time than building your won libraries.
 
-2. 2.Sharing DOM component details such as height, offsetTops, etc, between other components was a bit difficult because [React Refs](https://reactjs.org/docs/refs-and-the-dom.html) had to match parent containers' ids. That took me the long time to figure out.
+2. Sharing DOM component details such as height, offsetTops, etc, between other components was a bit difficult because [React Refs](https://reactjs.org/docs/refs-and-the-dom.html) had to match parent containers' ids. That took me the long time to figure out.
 
 3. After using Bootstrap for a while I had to re learn some CSS3 tricks like flex-box and how to use @keyframes + animation.
 
