@@ -53,7 +53,7 @@ export default class Projects extends React.Component {
 								}>
 								<div className="overlay">
 									<div className="text">
-										<h2>Aguas De Luz</h2>
+										<h2>CI/CD</h2>
 									</div>
 									<div>
 										<button
@@ -82,7 +82,7 @@ export default class Projects extends React.Component {
 								}>
 								<div className="overlay">
 									<div className="text">
-										<h2>To Do List</h2>
+										<h2>Azure</h2>
 									</div>
 									<div>
 										<button
