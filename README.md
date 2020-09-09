@@ -28,7 +28,7 @@ Personal portfolio page [www.fdaviz.com](https://www.fdaviz.com/) built in React
 
 ## Challenges that took me some time to solve
 
-1. Implementing Wow.js + Animate.css was difficult at the beginning, but worth it. It takes time to make it work with your app, yet it takes less time than building your won libraries.
+1. Implementing Wow.js + Animate.css was difficult at the beginning, but worth it. It takes time to make it work with your app, yet it takes less time than building your own libraries.
 
 2. 2.Sharing DOM component details such as height, offsetTops, etc, between other components was a bit difficult because [React Refs](https://reactjs.org/docs/refs-and-the-dom.html) had to match parent containers' ids. That took me the long time to figure out.
 
