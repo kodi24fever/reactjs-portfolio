@@ -4,8 +4,9 @@ import codepen from "../img/codepen.png";
 import github from "../img/github.png";
 import linkedin from "../img/linkedin.png";
 
-class Footer extends React.Component {
-	render() {
+export default function Footer() {
+
+
 		return (
 			<div id="footer" className="container-fluid text-center py-5">
 				<div className="container">
@@ -36,7 +37,4 @@ class Footer extends React.Component {
 				</div>
 			</div>
 		);
-	}
 }
-
-export default Footer;
