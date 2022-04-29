@@ -6,7 +6,9 @@ import linkedin from "../img/linkedin.png";
 
 export default function Footer() {
 
-
+		//get current year
+		const year = new Date().getFullYear();
+		
 		return (
 			<div id="footer" className="container-fluid text-center py-5">
 				<div className="container">
@@ -33,7 +35,7 @@ export default function Footer() {
 							</a>
 						</div>
 					</div>
-					<h5 className="pt-4">Frank Izquierdo &copy; 2018</h5>
+					<h5 className="pt-4">Frank Izquierdo &copy; {year}</h5>
 				</div>
 			</div>
 		);
