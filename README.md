@@ -34,6 +34,10 @@ Personal portfolio page [www.fdaviz.com](https://www.fdaviz.com/) built in React
 
 3. After using Bootstrap for a while I had to re learn some CSS3 tricks like flex-box and how to use @keyframes + animation.
 
+## Updating NPMs
+
+1. Removed node-sass(deprecated) library to use sass for bootstrap compatibility.
+
 ## Conclusion
 
 Thanks for visiting my react-portfolio-website and for taking time to read this!
