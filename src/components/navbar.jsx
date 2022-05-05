@@ -1,6 +1,6 @@
 import React from "react";
 import Background from "./background.jsx";
-import About from "./about.jsx";
+import About from "./about/about.jsx";
 //import Test from "./test.jsx";
 import Projects from "./projects.jsx";
 import Contact from "./contact.jsx";

@@ -1,55 +1,30 @@
 import React from "react";
-import layers from "../img/layers.png";
-import cogwheel from "../img/cogwheel.png";
-import pen from "../img/pen.png";
-import browser from "../img/browser.png";
-import myImage from "../img/myImage.png";
+import layers from "../../img/layers.png";
+import cogwheel from "../../img/cogwheel.png";
+import pen from "../../img/pen.png";
+import browser from "../../img/browser.png";
+import myImage from "../../img/myImage.png";
 import PropTypes from "prop-types";
 
-export default class About extends React.Component {
-	render() {
+
+//import about components
+import AboutLogos from "./about.logos";
+
+export default function About(props) {
 		return (
 			<div
 				id="about-container"
 				className="content-containers container text-center mt-5">
-				<h1 id="about" className={this.props.bounceLeft}>
+				<h1 id="about" className={props.bounceLeft}>
 					About
 				</h1>
-				<div className="row mt-5">
-					<div
-						className={
-							"col-6 col-sm-6 col-md-3 " + this.props.fadeInLeft
-						}>
-						<img src={layers} alt=""/>
-						<h4>Responsive</h4>
-					</div>
-					<div
-						className={
-							"col-6 col-sm-6 col-md-3 " + this.props.fadeInLeft
-						}>
-						<img src={pen} alt=""/>
-						<h4>Design</h4>
-					</div>
-					<div
-						className={
-							"col-6 col-sm-6 col-md-3 " + this.props.fadeInRight
-						}>
-						<img src={cogwheel} alt=""/>
-						<h4>Performance</h4>
-					</div>
-					<div
-						className={
-							"col-6 col-sm-6 col-md-3 " + this.props.fadeInRight
-						}>
-						<img src={browser} alt=""/>
-						<h4>Agile</h4>
-					</div>
-				</div>
+
+				<AboutLogos/>
 
 				<div className="row" style={{ marginTop: 7 + "rem" }}>
 					<div className="col-12 col-lg-6 hidden">
 						<img
-							className={"img-fluid " + this.props.fadeIn}
+							className={"img-fluid " + props.fadeIn}
 							src={myImage}
 							alt=""
 							style={{
@@ -58,7 +33,7 @@ export default class About extends React.Component {
 								width: 250 + "px"
 							}}
 						/>
-						<p className={"mytext pt-3 " + this.props.fadeIn}>
+						<p className={"mytext pt-3 " + props.fadeIn}>
 							I love to transform ideas into reality using code. I
 							am passionate about using Javascript and animations
 							to create awesome user experiences.
@@ -67,7 +42,7 @@ export default class About extends React.Component {
 					<div
 						className={
 							"col-12 col-sm-12 col-md-12 col-lg-6 " +
-							this.props.tada
+							props.tada
 						}>
 						<div className="progress mb-3">
 							<div
@@ -163,7 +138,6 @@ export default class About extends React.Component {
 				</div>
 			</div>
 		);
-	}
 }
 
 About.propTypes = {

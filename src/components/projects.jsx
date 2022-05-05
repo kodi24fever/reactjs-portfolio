@@ -108,7 +108,7 @@ export default class Projects extends React.Component {
 					</div>
 				</div>
 
-				{/*hidden modals*/}
+				{/*hidden modals
 				<div id="gallery-card">
 					<div id="vmarine" className="modal-card">
 						<div className="visual">
@@ -249,7 +249,7 @@ export default class Projects extends React.Component {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>*/}
 			</React.Fragment>
 		);
 	}
