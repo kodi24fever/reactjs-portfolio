@@ -34,9 +34,9 @@ export default function AboutLogos() {
     return(
         <div className="row mt-5">
             {
-            skils.map((skill) => {
+            skils.map((skill, index) => {
                 return (
-                    <div className={"col-6 col-sm-6 col-md-3 " + skill.animation}>
+                    <div className={"col-6 col-sm-6 col-md-3 " + skill.animation} key={index}>
                         <img src={skill.logo} alt=""/>
                         <h4>{skill.type}</h4>
                     </div>

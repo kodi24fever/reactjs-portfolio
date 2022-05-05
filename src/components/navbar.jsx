@@ -1,7 +1,6 @@
 import React from "react";
 import Background from "./background.jsx";
 import About from "./about/about.jsx";
-//import Test from "./test.jsx";
 import Projects from "./projects.jsx";
 import Contact from "./contact.jsx";
 
@@ -110,12 +109,6 @@ class Navbar extends React.Component {
 
 				<About
 					ref={this.about}
-					id="about-container"
-					bounceLeft={"wow bounceInLeft"}
-					fadeInLeft={"wow fadeInLeft"}
-					fadeInRight={"wow fadeInRight"}
-					fadeIn={"wow fadeIn"}
-					tada={"wow fadeIn"}
 				/>
 				<Projects
 					ref={this.projects}
