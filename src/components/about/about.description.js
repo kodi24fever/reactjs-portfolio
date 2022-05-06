@@ -3,7 +3,7 @@ import React from "react";
 import myImage from "../../img/myImage.png";
 
 //import skillBars
-import SkillBars from "./about.skillBars";
+import SkillBars from "./about.description.skillBars";
 
 export default function AboutDescription(props) {
     return (
