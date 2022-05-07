@@ -1,7 +1,4 @@
 import React from "react";
-import Vmarine from "../img/Vmarine.jpg";
-import aguaDeLuz from "../img/aguaDeLuz.png";
-import todo from "../img/todolist.png";
 import PropTypes from "prop-types";
 
 //import components
