@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-//import components
+//import project folder components
 import HiddenModals from "./projects/hiddenModals";
 import ProjectList from "./projects/projectList";
 

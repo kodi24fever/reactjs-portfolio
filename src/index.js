@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import About from './views/about';
-
+import ContactMe from './views/contact';
 
 //import 'bootstrap/dist/css/bootstrap.css';
 import "./styles/index.scss";
@@ -19,6 +19,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.Fragment>
 		<Navbar />
+		<ContactMe/>
 		<Footer />
 	</React.Fragment>
 );

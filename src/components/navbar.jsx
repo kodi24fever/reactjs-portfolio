@@ -4,6 +4,7 @@ import About from "./../views/about";
 import Projects from "./projects.jsx";
 import Contact from "./contact.jsx";
 
+
 import WOW from "wowjs";
 
 class Navbar extends React.Component {
