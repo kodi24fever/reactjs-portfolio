@@ -5,9 +5,8 @@ import PropTypes from "prop-types";
 import HiddenModals from "./projects/hiddenModals";
 import ProjectList from "./projects/projectList";
 
-export default class Projects extends React.Component {
+export default function Projects() {
 
-	render() {
 		return (
 			<React.Fragment>
 				<div id="my-projects" className="container-fluid bg-light mt-5">
@@ -23,19 +22,8 @@ export default class Projects extends React.Component {
 					</div>
 				</div>
 
-
-
 				<HiddenModals />
 
 			</React.Fragment>
 		);
-	}
 }
-
-Projects.propTypes = {
-	bounceIn: PropTypes.string,
-	fadeInLeft: PropTypes.string,
-	fadeInRight: PropTypes.string,
-	fadeIn: PropTypes.string,
-	tada: PropTypes.string
-};
