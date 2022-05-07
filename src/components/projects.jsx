@@ -14,7 +14,7 @@ export default class Projects extends React.Component {
 					<div className="project-container container bg-light pb-5">
 						<h1
 							id="projects"
-							className={"text-center " + this.props.fadeInRight}>
+							className={"text-center wow fadeInRight"}>
 							Projects
 						</h1>
 
