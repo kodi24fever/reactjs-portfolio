@@ -46,7 +46,7 @@ export default function HiddenModals() {
     ]);
 
 
-    function hideModal(name) {
+    function hiddeModal(name) {
         const modalBG = document.getElementById("gallery-card");
         const marineModal = document.getElementById(name);
         modalBG.style.display = "none";
@@ -65,26 +65,26 @@ export default function HiddenModals() {
 		<div id="gallery-card">
         {
             projects.map((project) => {
-                return (
-                    <div id={project.name} className="modal-card">
-                        <div className="visual">
-                            <img src={project.image} alt=""/>
-                        </div>
-                        <div className="modal-info">
-                            <h2>{project.name}</h2>
-                            <HiddenModalDescription description={project.description} />
-                            <div className="modal-bottom">
-                                <a href={project.ref} target="_blank">
-                                    <h3>{project.status}</h3>
-                                </a>
-                                <p className="close-icon"
-                                    style={style}
-                                    onClick={hideModal}>
-                                    &#10005;
-                                </p>
-                            </div>
-                        </div>
+            return (
+                <div id={project.name} className="modal-card">
+                    <div className="visual">
+                        <img src={project.image} alt=""/>
                     </div>
+
+                    <div className="modal-info">
+                        <h2>{project.name}</h2>
+
+                        <HiddenModalDescription description={project.description} />
+
+                        <div className="modal-bottom">
+                            <a href={project.ref} target="_blank">
+                                <h3>{project.status}</h3>
+                            </a>
+                            <p className="close-icon" style={style} onClick={hiddeModal}>&#10005;</p>
+                        </div>
+
+                    </div>
+                </div>
             );})
         }
         </div>
