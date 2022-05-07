@@ -48,9 +48,9 @@ export default function HiddenModals() {
 
     function hiddeModal(name) {
         const modalBG = document.getElementById("gallery-card");
-        const marineModal = document.getElementById(name);
+        const modal = document.getElementById(name);
         modalBG.style.display = "none";
-        marineModal.style.display = "none";
+        modal.style.display = "none";
     }
 
     const style = {
@@ -64,9 +64,9 @@ export default function HiddenModals() {
     return(
 		<div id="gallery-card">
         {
-            projects.map((project) => {
+            projects.map((project, index) => {
             return (
-                <div id={project.name} className="modal-card">
+                <div id={project.name} className="modal-card" key={index}>
                     <div className="visual">
                         <img src={project.image} alt=""/>
                     </div>
@@ -80,7 +80,7 @@ export default function HiddenModals() {
                             <a href={project.ref} target="_blank">
                                 <h3>{project.status}</h3>
                             </a>
-                            <p className="close-icon" style={style} onClick={hiddeModal}>&#10005;</p>
+                            <p className="close-icon" style={style} onClick={() => hiddeModal(project.name)}>&#10005;</p>
                         </div>
 
                     </div>
