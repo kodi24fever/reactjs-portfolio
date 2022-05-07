@@ -1,46 +1,58 @@
 import React, { useState } from 'react';
 
+
+//import images
+import Vmarine from "../../img/Vmarine.jpg";
+import aguaDeLuz from "../../img/aguaDeLuz.png";
+import todo from "../../img/todolist.png";
+
 export default function ProjectList() {
 
     const [projects] = useState([
         {
-            name: "vmarine"
+            name: "vmarine",
+            image: Vmarine,
+            button: "vmarine"
         },
         {
-            name: "agualuz"
+            name: "agualuz",
+            image: aguaDeLuz,
+            button: "agua"
         },
         {
-            name: "todolist"
+            name: "todolist",
+            image: todo,
+            button: "todo"
         }
     ]);
 
 
+    function showModal(name) {
+        const modalBG = document.getElementById("gallery-card");
+        const modal = document.getElementById(name);
+        modalBG.style.display = "block";
+        modal.style.display = "block";
+    }
+
+    function addbackground(image) {
+        const style = {
+            backgroundImage: 'url('+image+')'
+            }
+        return style;
+    }
 
     return (
         <div className="row my-5">
             {
                 projects.map((project, index) => {
                 return(
-                    <div className={ "testbg col-12 col-sm-12 col-md-4 wow fadeIn"} key={index}>
+                    <div className={"testbg col-12 col-sm-12 col-md-4 wow fadeIn"} key={index} style={addbackground(project.image)}>
                         <div className="overlay">
                             <div className="text">
                                 <h2>{project.name}</h2>
                             </div>
                             <div>
-                                <button
-                                    id="vmarine-button"
-                                    className="project-button"
-                                    onClick={() => {
-                                        var modalBG = document.getElementById(
-                                            "gallery-card"
-                                        );
-                                        var marineModal = document.getElementById(
-                                            "vmarine"
-                                        );
-                                        modalBG.style.display = "block";
-                                        marineModal.style.display =
-                                            "block";
-                                    }}>
+                                <button id={project.button + "-button"} className="project-button" onClick={() => showModal(project.name)}>
                                     Learn More
                                 </button>
                             </div>
@@ -48,95 +60,6 @@ export default function ProjectList() {
                     </div>
                 )})
             }
-
-
-            {/* <div
-                className={
-                    "testbg col-12 col-sm-12 col-md-4 " +
-                    this.props.fadeIn
-                }>
-                <div className="overlay">
-                    <div className="text">
-                        <h2>VMarine</h2>
-                    </div>
-                    <div>
-                        <button
-                            id="vmarine-button"
-                            className="project-button"
-                            onClick={() => {
-                                var modalBG = document.getElementById(
-                                    "gallery-card"
-                                );
-                                var marineModal = document.getElementById(
-                                    "vmarine"
-                                );
-                                modalBG.style.display = "block";
-                                marineModal.style.display =
-                                    "block";
-                            }}>
-                            Learn More
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                className={
-                    "aguabg col-12 col-sm-12 col-md-4 " +
-                    this.props.fadeIn
-                }>
-                <div className="overlay">
-                    <div className="text">
-                        <h2>Aguas De Luz</h2>
-                    </div>
-                    <div>
-                        <button
-                            id="agua-button"
-                            className="project-button"
-                            onClick={() => {
-                                var modalBG = document.getElementById(
-                                    "gallery-card"
-                                );
-                                var aguaModal = document.getElementById(
-                                    "agualuz"
-                                );
-                                modalBG.style.display = "block";
-                                aguaModal.style.display =
-                                    "block";
-                            }}>
-                            Learn More
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div
-                className={
-                    "todobg col-12 col-sm-12 col-md-4 " +
-                    this.props.fadeIn
-                }>
-                <div className="overlay">
-                    <div className="text">
-                        <h2>To Do List</h2>
-                    </div>
-                    <div>
-                        <button
-                            id="todo-button"
-                            className="project-button"
-                            onClick={() => {
-                                var modalBG = document.getElementById(
-                                    "gallery-card"
-                                );
-                                var todoModal = document.getElementById(
-                                    "todolist"
-                                );
-                                modalBG.style.display = "block";
-                                todoModal.style.display =
-                                    "block";
-                            }}>
-                            Learn More
-                        </button>
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
 }
