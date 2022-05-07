@@ -2,10 +2,6 @@ import React from 'react';
 
 export default function ProjectList() {
 
-
-
-
-
     return (
         <div className="row my-5">
 
