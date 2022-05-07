@@ -36,7 +36,7 @@ export default function ProjectList() {
 
     function addbackground(image) {
         const style = {
-            backgroundImage: 'url('+image+')'
+            backgroundImage: `url(${image})`
             }
         return style;
     }
