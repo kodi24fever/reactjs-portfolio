@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 //import components
 import HiddenModals from "./projects/hiddenModals";
+import ProjectList from "./projects/projectList";
 
 export default class Projects extends React.Component {
 
@@ -16,6 +17,8 @@ export default class Projects extends React.Component {
 							className={"text-center " + this.props.fadeInRight}>
 							Projects
 						</h1>
+
+						<ProjectList />
 						<div className="row my-5">
 							<div
 								className={

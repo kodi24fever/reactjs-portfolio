@@ -1,13 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function ProjectList() {
 
+    const [projects] = useState([
+        {
+            name: "vmarine"
+        },
+        {
+            name: "vmarine"
+        },
+        {
+            name: "vmarine"
+        }
+    ]);
+;
     return (
         <div className="row my-5">
+            {
+                projects.map((project) => {
+                    return(
+                        <div className={ "testbg col-12 col-sm-12 col-md-4 wow fadeIn"}>
+                            <div className="overlay">
+                                <div className="text">
+                                    <h2>{project.name}</h2>
+                                </div>
+                                <div>
+                                    <button
+                                        id="vmarine-button"
+                                        className="project-button"
+                                        onClick={() => {
+                                            var modalBG = document.getElementById(
+                                                "gallery-card"
+                                            );
+                                            var marineModal = document.getElementById(
+                                                "vmarine"
+                                            );
+                                            modalBG.style.display = "block";
+                                            marineModal.style.display =
+                                                "block";
+                                        }}>
+                                        Learn More
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                )})
+            }
 
 
-
-            <div
+            {/* <div
                 className={
                     "testbg col-12 col-sm-12 col-md-4 " +
                     this.props.fadeIn
@@ -93,7 +134,7 @@ export default function ProjectList() {
                         </button>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

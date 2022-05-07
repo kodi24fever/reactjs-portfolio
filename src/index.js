@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 //adding my imports
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
+import About from './views/about';
+
+
 //import 'bootstrap/dist/css/bootstrap.css';
 import "./styles/index.scss";
 
