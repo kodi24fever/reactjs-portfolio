@@ -108,7 +108,7 @@ class Navbar extends React.Component {
 					</div>
 				</nav>
 
-				<About
+				{/*<About
 					ref={this.about}
 				/>
 				<Projects
@@ -122,7 +122,7 @@ class Navbar extends React.Component {
 					id="my-contact"
 					fadeInLeft={"wow fadeInLeft"}
 					shake={"wow pulse"}
-				/>
+				/>*/}
 			</div>
 		);
 	}
