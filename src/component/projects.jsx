@@ -6,6 +6,29 @@ import PropTypes from "prop-types";
 
 export default class Projects extends React.Component {
 
+	 showModalCard = () => {
+		var modalBG = document.getElementById(
+			"gallery-card"
+		);
+		var marineModal = document.getElementById(
+			"vmarine"
+		);
+		modalBG.style.display = "block";
+		marineModal.style.display =
+			"block";
+	}
+
+	hideModelCard = () => {
+		var modalBG = document.getElementById(
+			"gallery-card"
+		);
+		var marineModal = document.getElementById(
+			"vmarine"
+		);
+		modalBG.style.display = "none";
+		marineModal.style.display = "none";
+	}
+
 	render() {
 		return (
 			<React.Fragment>
@@ -30,17 +53,7 @@ export default class Projects extends React.Component {
 										<button
 											id="vmarine-button"
 											className="project-button"
-											onClick={() => {
-												var modalBG = document.getElementById(
-													"gallery-card"
-												);
-												var marineModal = document.getElementById(
-													"vmarine"
-												);
-												modalBG.style.display = "block";
-												marineModal.style.display =
-													"block";
-											}}>
+											onClick={this.showModalCard}>
 											Learn More
 										</button>
 									</div>
@@ -59,17 +72,7 @@ export default class Projects extends React.Component {
 										<button
 											id="agua-button"
 											className="project-button"
-											onClick={() => {
-												var modalBG = document.getElementById(
-													"gallery-card"
-												);
-												var aguaModal = document.getElementById(
-													"agualuz"
-												);
-												modalBG.style.display = "block";
-												aguaModal.style.display =
-													"block";
-											}}>
+											onClick={this.showModalCard}>
 											Learn More
 										</button>
 									</div>
@@ -88,17 +91,7 @@ export default class Projects extends React.Component {
 										<button
 											id="todo-button"
 											className="project-button"
-											onClick={() => {
-												var modalBG = document.getElementById(
-													"gallery-card"
-												);
-												var todoModal = document.getElementById(
-													"todolist"
-												);
-												modalBG.style.display = "block";
-												todoModal.style.display =
-													"block";
-											}}>
+											onClick={this.showModalCard}>
 											Learn More
 										</button>
 									</div>
@@ -111,6 +104,20 @@ export default class Projects extends React.Component {
 				{/*hidden modals*/}
 				<div id="gallery-card">
 					<div id="vmarine" className="modal-card">
+					<div className="modal-bottom">
+								<h4>Comming Soon!</h4>
+								<p
+									className="close-icon"
+									style={{
+										textAlign: "right",
+										fontWeight: 900,
+										fontSize: 2 + "rem",
+										cursor: "pointer"
+									}}
+									onClick={this.hideModelCard}>
+									&#10005;
+								</p>
+							</div>
 						<div className="visual">
 							<img src={Vmarine} alt=""/>
 						</div>
@@ -129,29 +136,7 @@ export default class Projects extends React.Component {
 									</li>
 								</ul>
 							</div>
-							<div className="modal-bottom">
-								<h4>Comming Soon!</h4>
-								<p
-									className="close-icon"
-									style={{
-										textAlign: "right",
-										fontWeight: 900,
-										fontSize: 2 + "rem",
-										cursor: "pointer"
-									}}
-									onClick={() => {
-										var modalBG = document.getElementById(
-											"gallery-card"
-										);
-										var marineModal = document.getElementById(
-											"vmarine"
-										);
-										modalBG.style.display = "none";
-										marineModal.style.display = "none";
-									}}>
-									&#10005;
-								</p>
-							</div>
+
 						</div>
 					</div>
 
@@ -189,16 +174,7 @@ export default class Projects extends React.Component {
 										fontSize: 2 + "rem",
 										cursor: "pointer"
 									}}
-									onClick={() => {
-										var modalBG = document.getElementById(
-											"gallery-card"
-										);
-										var aguaModal = document.getElementById(
-											"agualuz"
-										);
-										modalBG.style.display = "none";
-										aguaModal.style.display = "none";
-									}}>
+									onClick={this.hideModelCard}>
 									&#10005;
 								</p>
 							</div>
@@ -234,16 +210,7 @@ export default class Projects extends React.Component {
 										fontSize: 2 + "rem",
 										cursor: "pointer"
 									}}
-									onClick={() => {
-										var modalBG = document.getElementById(
-											"gallery-card"
-										);
-										var todoModal = document.getElementById(
-											"todolist"
-										);
-										modalBG.style.display = "none";
-										todoModal.style.display = "none";
-									}}>
+									onClick={this.hideModelCard}>
 									&#10005;
 								</p>
 							</div>
