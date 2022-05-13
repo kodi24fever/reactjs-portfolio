@@ -4,6 +4,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 //adding my imports
+import Background from './views/background';
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import About from './views/about';
@@ -19,7 +20,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
 	<React.Fragment>
-		<Navbar />
+		<Background />
+		<Navbar />	
 		<About />
 		<Projects />
 		<ContactMe/>

@@ -1,5 +1,8 @@
 import React from "react";
-import Background from "./background.jsx";
+import Background from "../views/background";
+
+
+
 import About from "./../views/about";
 import Projects from "./projects.jsx";
 import Contact from "./contact.jsx";
@@ -48,12 +51,6 @@ class Navbar extends React.Component {
 	render() {
 		return (
 			<div>
-				<Background
-					ref={this.navEffect}
-					id="my-background"
-					aboutRef={this.about}
-					bounceIn={"wow bounceIn"}
-				/>
 				<nav
 					id="navbar"
 					className="navbar navbar-expand-lg navbar-light bg-light">
@@ -107,22 +104,6 @@ class Navbar extends React.Component {
 						</div>
 					</div>
 				</nav>
-
-				{/*<About
-					ref={this.about}
-				/>
-				<Projects
-					ref={this.projects}
-					id="my-projects"
-					fadeInRight={"wow fadeInRight"}
-					fadeIn={"wow fadeIn"}
-				/>
-				<Contact
-					ref={this.contact}
-					id="my-contact"
-					fadeInLeft={"wow fadeInLeft"}
-					shake={"wow pulse"}
-				/>*/}
 			</div>
 		);
 	}

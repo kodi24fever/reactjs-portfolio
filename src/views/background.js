@@ -1,14 +1,14 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, {useEffect} from "react";
 
 import WOW from "wowjs";
 
-export default class Background extends React.Component {
-	componentDidMount() {
-		new WOW.WOW().init();
-	}
+export default function Background() {
 
-	render() {
+	useEffect(() => {
+		new WOW.WOW().init();
+	},[]	
+	)
+
 		return (
 			<div id="my-background" className="background">
 				<div id="stars" />
@@ -21,9 +21,7 @@ export default class Background extends React.Component {
 						I&apos;m a Full Stack Web Developer.
 					</h1>
 					{/* offset can be changed in node modules wowjs default file */}
-					<button
-						className={"work-button " + this.props.bounceIn}
-						data-wow-offset="0"
+					<button className={"work-button wow bounceIn"} data-wow-offset="0"
 						onClick={() => {
 							let node = document.getElementById(
 								this.props.aboutRef.current.props.id
@@ -38,10 +36,4 @@ export default class Background extends React.Component {
 				</div>
 			</div>
 		);
-	}
 }
-
-Background.propTypes = {
-	aboutRef: PropTypes.object,
-	bounceIn: PropTypes.string
-};
