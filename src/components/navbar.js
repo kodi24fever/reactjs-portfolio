@@ -1,25 +1,10 @@
-import React from "react";
-import Background from "../views/background";
-
-import About from "../views/about";
+import React, {useEffect} from "react";
 
 import WOW from "wowjs";
 
-class Navbar extends React.Component {
-	constructor(props) {
-		super(props);
-		this.about = React.createRef();
-		this.projects = React.createRef();
-		this.contact = React.createRef();
+export default function Navbar() {
 
-		this.scrolling = this.scrolling.bind(this);
-	}
-
-	componentDidMount() {
-		new WOW.WOW().init();
-	}
-
-	navEffect() {
+	useEffect(() => {
 		window.addEventListener("scroll", () => {
 			var navBar = document.getElementById("navbar");
 			var domRect = navBar.getBoundingClientRect();
@@ -33,17 +18,15 @@ class Navbar extends React.Component {
 				navBar.classList.remove("fade-in-nav");
 			}
 		});
-	}
+	}, [])
 
-	scrolling(instance) {
+	function scrolling(instance) {
 		let node = document.getElementById(instance.current.props.id);
 		window.scrollTo({
 			top: node.offsetTop,
 			behavior: "smooth"
 		});
 	}
-
-	render() {
 		return (
 			<div>
 				<nav
@@ -101,7 +84,4 @@ class Navbar extends React.Component {
 				</nav>
 			</div>
 		);
-	}
 }
-
-export default Navbar;
