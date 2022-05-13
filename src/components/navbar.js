@@ -20,13 +20,19 @@ export default function Navbar() {
 		});
 	}, [])
 
+	console.log(document.getElementById("about-container"))
+
 	function scrolling(instance) {
-		let node = document.getElementById(instance.current.props.id);
+		let node = document.getElementById("about-container");
+
+		
 		window.scrollTo({
 			top: node.offsetTop,
 			behavior: "smooth"
 		});
 	}
+
+
 		return (
 			<div>
 				<nav
@@ -57,10 +63,7 @@ export default function Navbar() {
 							className="collapse navbar-collapse"
 							id="navbarNavAltMarkup">
 							<div className="navbar-nav">
-								<a
-									onClick={() => {
-										this.scrolling(this.about);
-									}}
+								<a onClick={scrolling}
 									className="btn-style nav-item nav-link">
 									About
 								</a>
