@@ -1,7 +1,7 @@
 import React from "react";
 import Background from "../views/background";
 
-import About from "./../views/about";
+import About from "../views/about";
 
 import WOW from "wowjs";
 
