@@ -1,5 +1,8 @@
 import React, {useEffect} from "react";
 
+//import hooks
+import SmoothScrollTo from "../hooks/smoothScrollTo";
+
 import WOW from "wowjs";
 
 export default function Background() {
@@ -8,6 +11,7 @@ export default function Background() {
 		new WOW.WOW().init();
 	},[]	
 	)
+
 	return (
 		<div id="my-background" className="background">
 			<div id="stars" />
@@ -21,15 +25,7 @@ export default function Background() {
 				</h1>
 				{/* offset can be changed in node modules wowjs default file */}
 				<button className={"work-button wow bounceIn"} data-wow-offset="0"
-					onClick={() => {
-						let node = document.getElementById(
-							this.props.aboutRef.current.props.id
-						);
-						window.scrollTo({
-							top: node.offsetTop,
-							behavior: "smooth"
-						});
-					}}>
+					onClick={() => SmoothScrollTo("my-projects")}>
 					View my work
 				</button>
 			</div>
