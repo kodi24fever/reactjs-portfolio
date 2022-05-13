@@ -8,7 +8,7 @@ export default function HiddenModalDescription(props) {
     //Have to pass props from parent component so info does not repeat itself 
 
     function getList() {
-        return descriptions.description.map((description) => <li>{description}</li>)
+        return descriptions.description.map((description, index) => <li key={index}>{description}</li>)
     }
 
     return (
