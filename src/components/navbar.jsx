@@ -1,12 +1,7 @@
 import React from "react";
 import Background from "../views/background";
 
-
-
 import About from "./../views/about";
-import Projects from "./projects.jsx";
-import Contact from "./contact.jsx";
-
 
 import WOW from "wowjs";
 

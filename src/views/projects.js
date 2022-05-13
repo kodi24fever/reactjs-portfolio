@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //import project folder components
-import HiddenModals from "./projects/hiddenModals";
-import ProjectList from "./projects/projectList";
+import HiddenModals from "../components/projects/hiddenModals";
+import ProjectList from "../components/projects/projectList";
 
 export default function Projects() {
 

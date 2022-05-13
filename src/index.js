@@ -8,11 +8,13 @@ import Background from './views/background';
 import Navbar from "./components/navbar.jsx";
 import Footer from "./components/footer.jsx";
 import About from './views/about';
-import Projects from './components/projects';
+import Projects from './views/projects';
 import ContactMe from './views/contact';
 
 //import 'bootstrap/dist/css/bootstrap.css';
 import "./styles/index.scss";
+
+
 
 
 //new import for react 18+ using createRoot
