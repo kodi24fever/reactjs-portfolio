@@ -5,8 +5,6 @@ import React, {useEffect} from "react";
 import SmoothScrollTo from "../hooks/smoothScrollTo";
 
 
-import WOW from "wowjs";
-
 export default function Navbar() {
 
 	useEffect(() => {
@@ -26,19 +24,9 @@ export default function Navbar() {
 	}, [])
 
 	return (
-		<nav
-			id="navbar"
-			className="navbar navbar-expand-lg navbar-light bg-light">
+		<nav id="navbar" className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container">
-				<a className="home-style navbar-brand"
-					onClick={() => { 
-						window.scrollTo({
-							top: 0,
-							behavior: "smooth"
-						});
-					}}>
-					Back to Space
-				</a>
+				<a className="home-style navbar-brand" onClick={() => SmoothScrollTo("root")}>Back to Space</a>
 				<button
 					className="navbar-toggler"
 					type="button"
