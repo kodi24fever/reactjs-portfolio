@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+//import bootstrap.js file for functionalitites
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 //adding my imports
 import Background from './views/background';
