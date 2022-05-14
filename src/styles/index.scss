@@ -152,8 +152,7 @@
     font-size: 1rem;
 }
 
-.testbg { 
-    background-image: url("../img/Vmarine.jpg");
+.testbg {
     height: 400px; 
     background-position: center;
     background-repeat: no-repeat;
@@ -256,9 +255,9 @@
     animation: fill90Bar 2s;
 }
 
-
+//*Changing here changes hover for project for some reason paos:absolute as before is not working
 .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
