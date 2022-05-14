@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
+
 //adding my imports
 import Background from './views/background';
 import Navbar from "./components/navbar.js";

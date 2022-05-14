@@ -31,9 +31,8 @@ export default function Navbar() {
 				id="navbar"
 				className="navbar navbar-expand-lg navbar-light bg-light">
 				<div className="container">
-					<a
-						className="home-style navbar-brand"
-						onClick={() => {
+					<a className="home-style navbar-brand"
+						onClick={() => { 
 							window.scrollTo({
 								top: 0,
 								behavior: "smooth"
@@ -44,16 +43,14 @@ export default function Navbar() {
 					<button
 						className="navbar-toggler"
 						type="button"
-						data-toggle="collapse"
-						data-target="#navbarNavAltMarkup"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNavAltMarkup"
 						aria-controls="navbarNavAltMarkup"
 						aria-expanded="false"
 						aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon" />
 					</button>
-					<div
-						className="collapse navbar-collapse"
-						id="navbarNavAltMarkup">
+					<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 						<div className="navbar-nav">
 							<a onClick={() => SmoothScrollTo("about-container")} className="btn-style nav-item nav-link">About</a>
 							<a onClick={() => SmoothScrollTo("my-projects")}className="btn-style nav-item nav-link">Projects</a>
