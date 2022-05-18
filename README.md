@@ -1,9 +1,5 @@
-# React-Portfolio App
-
-  
-
-Personal portfolio page [www.fdaviz.com](https://www.fdaviz.com/) built in React.
-
+# React-Portfolio Sample App
+Personal portfolio page [www.fdaviz.com](https://www.fdaviz.com/).
   
 
 ## Building Process
