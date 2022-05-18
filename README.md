@@ -30,9 +30,13 @@ Personal portfolio page [www.fdaviz.com](https://www.fdaviz.com/).
 
 3. After using Bootstrap for a while I had to re learn some CSS3 tricks like flex-box and how to use @keyframes + animation.
 
-## Updating NPMs
+## Updates
 
 1. Removed node-sass(deprecated) library to use sass for bootstrap compatibility.
+
+2. Separated each view into smaller components using functions instead of classes
+
+3. created folder hooks to store hooks that are reusable in other components.
 
 ## Conclusion
 
